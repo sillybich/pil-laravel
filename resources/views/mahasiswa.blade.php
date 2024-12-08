@@ -39,33 +39,70 @@
       <div class="container">
         <h1>Ini adalah halaman Mahasiswa</h1>
 
-        {{-- 
-          ROWSPAN = untuk menggabungkan baris
-          COLSPAN = untuk menggabungkan kolom
-        --}}
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Tabel Mahasiswa</h4>
+            <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
+              <thead>
+                <tr>
+                  <th>NPM</th>
+                  <th>Nama Mahasiswa</th>
+                  <th>Jenis Kelamin</th>
+                  <th colspan="2">TTL</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for ($i = 0; $i < $jumlah; $i++)
+                <tr>
+                  <td>{{ $npm[$i] }}</td>
+                  <td>{{ $nama[$i] }}</td>
+                  <td>Laki-Laki</td>
+                  <td>21-10-2007</td>
+                  <td>Kota Medan</td>
+                </tr>  
+                @endfor   
+              </tbody>
+            </table>
+          </div>
+          <div class="col-sm-6">
+            <h4>Form Mahasiswa</h4>
+            <form action="" method="get">
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="">NPM</label>
+                  <input type="number" name="npm" class="form-control" placeholder="Input NPM">
+                </div>
+                <div class="col-sm-6">
+                  <label for="">Nama Mahasiswa</label>
+                  <input type="text" name="nama_mahasiswa" id="" class="form-control" placeholder="Input Nama Mahasiswa">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="">Tanggal Lahir</label>
+                  <input type="date" name="" id="" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                  <label for="">Prodi</label>
+                  <select name="" id="" class="form-control">
+                    <option value="">Sistem Informasi</option>
+                    <option value="">Ilmu Komputer</option>
+                    <option value="">Biologi</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="row mt-2">
+                <div class="col-sm-12">
+                  <button class="btn btn-primary" style="width: 100%">Simpan</button>
+                </div>
+              </div>
 
+            </form>
+          </div>
+        </div>
 
-        <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
-          <thead>
-            <tr>
-              <th>NPM</th>
-              <th>Nama Mahasiswa</th>
-              <th>Jenis Kelamin</th>
-              <th colspan="2">TTL</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for ($i = 0; $i < $jumlah; $i++)
-            <tr>
-              <td>{{ $npm[$i] }}</td>
-              <td>{{ $nama[$i] }}</td>
-              <td>Laki-Laki</td>
-              <td>21-10-2007</td>
-              <td>Kota Medan</td>
-            </tr>  
-            @endfor   
-          </tbody>
-        </table>
+        
 
       </div>
 
