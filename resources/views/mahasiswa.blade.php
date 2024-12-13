@@ -52,15 +52,7 @@
                 </tr>
               </thead>
               <tbody>
-                @for ($i = 0; $i < $jumlah; $i++)
-                <tr>
-                  <td>{{ $npm[$i] }}</td>
-                  <td>{{ $nama[$i] }}</td>
-                  <td>Laki-Laki</td>
-                  <td>21-10-2007</td>
-                  <td>Kota Medan</td>
-                </tr>  
-                @endfor   
+                 
               </tbody>
             </table>
           </div>
@@ -74,17 +66,17 @@
                 </div>
                 <div class="col-sm-6">
                   <label for="">Nama Mahasiswa</label>
-                  <input type="text" name="nama_mahasiswa" id="" class="form-control" placeholder="Input Nama Mahasiswa">
+                  <input type="text" name="nama_mahasiswa" class="form-control" placeholder="Input Nama Mahasiswa">
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <label for="">Tanggal Lahir</label>
-                  <input type="date" name="" id="" class="form-control">
+                  <input type="date" name="tgl_lahir" class="form-control">
                 </div>
                 <div class="col-sm-6">
                   <label for="">Prodi</label>
-                  <select name="" id="" class="form-control">
+                  <select name="prodi" class="form-control">
                     <option value="">Sistem Informasi</option>
                     <option value="">Ilmu Komputer</option>
                     <option value="">Biologi</option>
