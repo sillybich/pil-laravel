@@ -52,11 +52,6 @@
         <div class="row">
           <div class="col-sm-12">
             @if (Session::has('success'))
-                {{-- <div class="pt-3">
-                  <div class="alert alert-success">
-                    {{ Session::get('success') }}
-                  </div>
-                </div> --}}
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                   <strong>Successfully</strong> {{ Session::get('success') }}
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -70,7 +65,7 @@
             <table class="table table-primary table-sm table-hover table-striped table-bordered text-center">
               <thead>
                 <tr>
-                  <th>NPM</th>
+                  <th>NIM</th>
                   <th>Nama Mahasiswa</th>
                   <th>Jenis Kelamin</th>
                   <th colspan="2">TTL</th>

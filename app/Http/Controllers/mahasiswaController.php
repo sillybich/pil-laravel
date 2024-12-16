@@ -64,7 +64,7 @@ class mahasiswaController extends Controller
             'tgl_lahir' => $request->tgl_lahir,
             'alamat' => $request->alamat
         ];
-        mahasiswa::created($data);
+        mahasiswa::create($data);
         return redirect('/mahasiswa')->with('success', 'Data Berhasil ditambahkan!');
     }
 
